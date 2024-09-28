@@ -9,7 +9,7 @@ def show_custom_alert():
     alert_window.resizable(False, False)
     alert_window.attributes("-topmost", True)
     
-    # Add custom label
+    # label
     label = tk.Label(
         alert_window, 
         text="It's time to take a break!\n Have a Kit-Kat¯\_(ツ)_/¯ \nLook outside for a while to keep your eyes healthy.",
@@ -20,7 +20,7 @@ def show_custom_alert():
     )
     label.pack()
 
-    # Custom button to close
+    # Close Button
     close_button = tk.Button(
         alert_window, 
         text="I'm Gonna Look Outside", 
@@ -33,13 +33,8 @@ def show_custom_alert():
     )
     close_button.pack(pady=10)
     
-    # Remove window close buttons
     alert_window.overrideredirect(True)
-
-    # Centering the window on screen
     alert_window.eval('tk::PlaceWindow . center')
-    
-    # Ensures user cannot interact with main window until this alert is closed
     alert_window.grab_set()
 
 root = tk.Tk()
